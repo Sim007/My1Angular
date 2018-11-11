@@ -1,4 +1,7 @@
-# MyFirstAngularApp
+This repo is for Docker 102 course.
+
+
+# My1Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
 
