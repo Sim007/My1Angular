@@ -9,9 +9,9 @@ RUN npm run build --prod
 
 ##### Stage 2 - run
 FROM nginx:alpine
-#VOLUME /var/cache/nginx
-COPY --from=Angular /app/dist/MyFirstAngularApp /usr/share/nginx/html
-#COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
+#VOLUME /var/cache/nginx -delete?
+COPY --from=Angular /app/dist/My1Angular /usr/share/nginx/html
+#COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf - delete?
 
-# docker build -t My1Angular-prodflow -f My1Angular.prodflow.dockerfile.yml .
-# docker container run -d --rm -p 8080:80 My1Angelar-prodflow
+# docker build -t my1angular.prodflow -f my1angular.prodflow.dockerfile .
+# docker container run -d --rm -p 4200:80 my1angular.prodflow
