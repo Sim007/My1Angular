@@ -1,6 +1,6 @@
 ##### Stage 1 - build app
 FROM node:10.13-alpine as Angular
-LABEL author="Johannes Sim"
+LABEL author="Johannes Sim modified for workshop"
 WORKDIR /app
 COPY package.json package.json
 RUN npm install
@@ -12,7 +12,8 @@ RUN npm run build --prod
 FROM nginx:alpine
 #VOLUME /var/cache/nginx - nginx config
 COPY --from=Angular /app/dist/My1Angular /usr/share/nginx/html
-#COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf - nginx
+#COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf - nginx config 
 
+# docker commands
 # docker build -t my1angular.prod -f my1angular.prodflow.dockerfile .
 # docker container run -d --rm --name my1angular -p 4200:80 my1angular.prodflow
