@@ -1,4 +1,4 @@
-This repo is for Docker 102 course.
+This repo is for Docker 103 course.
 
 # My1Angular
 
